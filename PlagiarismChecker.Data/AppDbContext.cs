@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace PlagiarismChecker.Data
 {
-    class PlagiarismContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public PlagiarismContext(DbContextOptions<PlagiarismContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
