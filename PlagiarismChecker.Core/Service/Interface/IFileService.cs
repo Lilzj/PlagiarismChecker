@@ -10,6 +10,6 @@ namespace PlagiarismChecker.Core.Service.Interface
 {
     public interface IFileService
     {
-        Task<List<FileUploadResponse>> UploadFile(IFormFile files);
+        Task<List<FileUploadResponse>> UploadFile(List<IFormFile> files);
     }
 }
