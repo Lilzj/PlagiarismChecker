@@ -5,8 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
-    <Folder Include="Implementation\" />
+    <Folder Include="Repository\Interface\" />
+    <Folder Include="Repository\Implementation\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PlagiarismChecker.Data\PlagiarismChecker.Data.csproj" />
+    <ProjectReference Include="..\PlagiarismChecker.Model\PlagiarismChecker.Model.csproj" />
   </ItemGroup>
 
 </Project>
