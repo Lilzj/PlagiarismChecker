@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PlagiarismChecker.Core\PlagiarismChecker.Core.csproj" />
     <ProjectReference Include="..\PlagiarismChecker.Data\PlagiarismChecker.Data.csproj" />
   </ItemGroup>
 

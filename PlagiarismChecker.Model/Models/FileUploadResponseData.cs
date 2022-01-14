@@ -8,7 +8,7 @@ namespace PlagiarismChecker.Model.Models
 {
     public class FileUploadResponseData
     {
-        public int Id { get; set; }
+        public string Id { get; set; } 
         public string Status { get; set; }
         public string FileName { get; set; }
         public string ErrorMessage { get; set; }

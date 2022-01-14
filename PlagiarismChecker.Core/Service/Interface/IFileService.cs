@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using PlagiarismChecker.Model.Dto;
 using PlagiarismChecker.Model.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace PlagiarismChecker.Core.Service.Interface
 {
     public interface IFileService
     {
-        Task<List<FileUploadResponse>> UploadFile(List<IFormFile> files);
+        Task<FileUploadResponse> UploadFile(FileUploadDto reg);
     }
 }

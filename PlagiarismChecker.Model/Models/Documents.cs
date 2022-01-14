@@ -12,7 +12,7 @@ namespace PlagiarismChecker.Models
         public string StudentName { get; set; }
         public string FileName { get; set; }
         public long FileSize { get; set; }
-        public byte FileContent { get; set; }
+        public byte[] FileContent { get; set; }
         public DateTime UploadedDate { get; set; } = DateTime.Now;
 
     }

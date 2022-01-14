@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PlagiarismChecker.Core.Service.Implementation;
+using PlagiarismChecker.Core.Service.Interface;
 using PlagiarismChecker.Data;
 using PlagiarismChecker.Settings;
 using System;
@@ -39,6 +41,7 @@ namespace PlagiarismChecker
 
             services.Configure<JWTData>(Configuration.GetSection(JWTData.Data));
             services.Configure<DataProtectionTokenProviderOptions>(options => options.TokenLifespan = TimeSpan.FromHours(5));
+            services.AddScoped<IFileService, FileService>();
 
 
             //configuration for JWT
@@ -72,13 +75,13 @@ namespace PlagiarismChecker
 
             app.UseHttpsRedirection();
 
-            app.Use(async (context, next) =>
-            {
-                var token = context.Session.GetString("Token");
-                if (!string.IsNullOrWhiteSpace(token))
-                    context.Request.Headers.Add("Authorization", "Bearer " + token);
-                await next();
-            });
+            //app.Use(async (context, next) =>
+            //{
+            //    var token = context.Session.GetString("Token");
+            //    if (!string.IsNullOrWhiteSpace(token))
+            //        context.Request.Headers.Add("Authorization", "Bearer " + token);
+            //    await next();
+            //});
 
             app.UseRouting();
 
