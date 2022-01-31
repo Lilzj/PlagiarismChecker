@@ -12,5 +12,6 @@ namespace PlagiarismChecker.Core.Service.Interface
     public interface IFileService
     {
         Task<FileUploadResponse> UploadFile(FileUploadDto reg);
+        Task<>
     }
 }

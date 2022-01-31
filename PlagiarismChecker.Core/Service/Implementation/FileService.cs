@@ -40,7 +40,7 @@ namespace PlagiarismChecker.Core.Service.Implementation
                         {
                             await item.CopyToAsync(memoryStream);
 
-                            // Upload check if less than 2mb!
+                            // File Upload check if less than 2mb!
                             if (memoryStream.Length < 2097152)
                             {
                                 var file = new Documents()
